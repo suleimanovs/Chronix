@@ -8,6 +8,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
@@ -96,4 +97,10 @@ fun ChronixTheme(
     }
 
     MaterialTheme(colorScheme = colorScheme, typography = Typography, content = content)
+}
+
+internal val CurrentTheme = staticCompositionLocalOf { Theme.LIGHT }
+
+enum class Theme {
+    LIGHT, DARK
 }
