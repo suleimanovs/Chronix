@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Chronix"
 include(":app")
-include(":common:resourcess")
+include(":common:resources")
+include(":common:core")
+include(":common:ui-components")
+include(":common:theme")
